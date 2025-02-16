@@ -1,0 +1,31 @@
+{
+    "all-areas":[
+        "updated color scheme on all areas",
+        "updated banner image on all areas",
+        "updated font from  \"Roman\" to \"Eyyy\" on all areas"        
+    ],
+    "header": [
+        "updated company logo on the header area",
+        "added company phone number on header area",
+        "added company email on header area"
+    ],
+    "main-navigation": [
+        "updated tab from \"Tab\" to \"To Tab\" in the main navigation area",
+        "added a new dropdown menu in the main navigation area"
+    ],
+    "banner" : [
+        "updated banner image",
+        "updated banner slogan",
+        "updated page title on banner area",
+        "added page title on banner area",
+        "removed banner",
+        "removed page title on banner area"
+    ],
+    "social-media" : [
+        "updated social media icons on the header area",
+        "updated Facebook social media link on the header area",
+        "updated Twitter social media link on the header area",
+        "updated social media icons layout presentation on the header area",
+        "added \"Facebook icon\" on header area"
+    ]
+}

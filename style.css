@@ -1,0 +1,60 @@
+aside ul li{ position: relative; z-index: 1;  }
+aside ul li.active a{ color: #fff !important; }
+aside ul .active::after{ content: ""; position: absolute; right: -28px;top: 0; height: 100%; width: 115%; background: #3d3d3d; z-index: -1; border-top-left-radius: 50px; border-bottom-left-radius: 50px;}
+aside ul li a{ width: 100%; }
+.copyright{ position: absolute; bottom: 0; }
+.copyright p{ font-size: 15px; color: #d3d3d3; }
+.w-fit{ width: fit-content !important; }
+
+li.list-group-item a {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    height: 100%;
+    width: 100%;
+    transform: translateY(-22%);
+}
+
+li.list-group-item a{ color: #000 !important; }
+li.list-group-item.active { background: #000; color: #fff; }
+li.list-group-item.active a{ color: #fff !important; }
+
+ol#orch-sidebar li {
+    font-size: 15px;
+    padding: 10px auto;
+}
+
+#content {
+    max-height: 100vh;
+    overflow-y: auto;
+    direction: rtl; /* Reverses content direction */
+}
+
+#content * {
+    direction: ltr; /* Keeps inner content left-aligned */
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+
+.copy-text{ cursor:grab; }
+.copy-text:hover{ background: #000; color: #fff; }
