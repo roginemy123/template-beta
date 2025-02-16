@@ -1,3 +1,0 @@
-aside ul li{ position: relative; z-index: 1;  }
-aside ul li.active a{ color: #fff !important; }
-aside ul .active::after{ content: ""; position: absolute; right: -28px;top: 0; height: 100%; width: 115%; background: #3d3d3d; z-index: -1; border-top-left-radius: 50px; border-bottom-left-radius: 50px;}
