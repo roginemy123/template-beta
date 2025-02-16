@@ -1,176 +1,75 @@
-<p class="bg-dark text-light p-2 d-inline-block">Orchestra Templates</p>
-
 <div class="row">
     <div class="col-lg-4">
-        <div class="card">
-            <div class="card-header text-start">
-                <h5>Entries by Area</h5>
-            </div>
+        <div class="card text-center h-100">
+            <div class="card-header h-100">Orchestra Templates</div>
             <div class="card-body">
-                <ol class="list-group list-group-light" id="orch-sidebar">
-                    <li class="list-group-item d-flex justify-content-between align-items-start active">
-                        <div class="ms-2 me-auto">
-                          <div class="fw-bold"><a href="all-areas" class="nav-link">All Areas</a></div>
-                        </div>
-                        <span class="badge badge-primary rounded-pill me-2">0</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="ms-2 me-auto">
-                        <div class="fw-bold"><a href="header" class="nav-link">Header</a></div>
-                      </div>
-                      <span class="badge badge-primary rounded-pill me-2">0</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="ms-2 me-auto">
-                        <div class="fw-bold"><a href="main-navigation" class="nav-link">Main Navigation</a></div>
-                      </div>
-                      <span class="badge badge-primary rounded-pill me-2">0</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                      <div class="ms-2 me-auto">
-                        <div class="fw-bold"><a href="middle" class="nav-link">Middle Area</a></div>
-                      </div>
-                      <span class="badge badge-primary rounded-pill me-2">0</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                          <div class="fw-bold"><a href="main" class="nav-link">Main Area</a></div>
-                        </div>
-                        <span class="badge badge-primary rounded-pill me-2">0</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                          <div class="fw-bold"><a href="bottom" class="nav-link">Bottom Area</a></div>
-                        </div>
-                        <span class="badge badge-primary rounded-pill me-2">0</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                          <div class="fw-bold"><a href="footer" class="nav-link">Footer Area</a></div>
-                        </div>
-                        <span class="badge badge-primary rounded-pill me-2">0</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Other</div>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                          <div class="fw-bold"><a href="banner" class="nav-link">Banner</a></div>
-                        </div>
-                        <span class="badge badge-primary rounded-pill me-2">0</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                          <div class="fw-bold"><a href="social-media" class="nav-link">Social Media</a></div>
-                        </div>
-                        <span class="badge badge-primary rounded-pill me-2">0</span>
-                    </li>
-                </ol>
+              <h1 class="card-title" id="orch-temp-count">20</h1>
+              <p class="card-text">Sponsored by: Clint</p>
+              <button type="button" data-url="/pages/orchestra-templates.html" class="btn btn-dark global-btn" data-mdb-ripple-init>Go To <i class="fa fa-arrow-right"></i></button>
             </div>
-        </div>
+          </div>
     </div>
-    <div class="col-lg-8">
-        <ul class="list-result sticky-top" id="list-result">
-            <li>No record found</li>
-        </ul>
+
+    <div class="col-lg-4">
+        <div class="card text-center h-100">
+            <div class="card-header h-100">Orchestra Custom <span class="d-block">Templates</span></div>
+            <div class="card-body">
+              <h1 class="card-title">1000</h1>
+              <p class="card-text">Sponsored by: Nikko</p>
+              <button type="button" data-url="/pages/orch-custom-template.html" class="btn btn-dark global-btn" data-mdb-ripple-init>Go To <i class="fa fa-arrow-right"></i></button>
+            </div>
+          </div>
     </div>
+
+    <div class="col-lg-4">
+        <div class="card text-center h-100">
+            <div class="card-header h-100">JQuery Templates</div>
+            <div class="card-body">
+              <h1 class="card-title">1000</h1>
+              <p class="card-text">Sponsored by: Jonathan</p>
+              <button type="button" data-url="/pages/jquery-template.html" class="btn btn-dark global-btn" data-mdb-ripple-init>Go To <i class="fa fa-arrow-right"></i></button>
+            </div>
+          </div>
+    </div>
+
 </div>
 
 <script>
-$(document).ready(function () {
-    let navAnchor;
-
-    function getUpdateOrch() {
-        return $.ajax({
-            url: "json/update-orchestra.json",
-            cache: false,
-            dataType: "json",
-        }).fail(function (xhr, status, error) {
-            console.error("Error fetching JSON:", status, error);
-            console.error("Response Text:", xhr.responseText);
-        });
-    }
-
-    function activateNav(nav) {
-        $("#orch-sidebar li").removeClass("active");
-        $(nav).closest("li").addClass("active");
-
-        if (typeof showContent === "function") {
-            showContent($(nav).attr("href"));
-        }
-    }
-
-    function updateBadgeCounts(updateData) {
-        $("#orch-sidebar li").each(function () {
-            let link = $(this).find("a.nav-link"); // Get the anchor tag
-            let key = link.attr("href"); // Get the href value (category key)
-            let badge = $(this).find("span.badge");
-
-            if (key && updateData[key]) {
-                badge.text(updateData[key].length); // Update badge count
-            } else {
-                badge.text("0"); // Set to 0 if no data
-            }
-        });
-
-        // Update total count for "All Areas"
-        let totalCount = Object.values(updateData).reduce((acc, arr) => acc + arr.length, 0);
-        // $("#orch-sidebar li:first-child span.badge").text(totalCount);
-    }
-
-    $("#orch-sidebar").on("click", "li a", function (e) {
-        e.preventDefault();
-        navAnchor = $(this);
-        let listResult = $("#list-result");
-        activateNav(this);
-
-        getUpdateOrch().done(function (updateData) {
-            updateBadgeCounts(updateData); // Update badge counts dynamically
-
-            let found = false;
-            $.each(updateData, function (key, values) {
-                if (navAnchor.attr("href") === key) {
-                    let newContent = values.map(item => `<li class="copy-text">${item}</li>`).join("");
-                    listResult.html(newContent);
-                    found = true;
-                }
-            });
-
-            if (!found) {
-                listResult.html(`<li>No record found</li>`);
-            }
-        });
-    });
-
-    // Auto copy text on click with toast notification
-    $(".list-result").on("click", ".copy-text", function () {
-        let textToCopy = $(this).text().trim();
-        navigator.clipboard.writeText(textToCopy).then(() => {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: "bottom-end",
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.onmouseenter = Swal.stopTimer;
-                    toast.onmouseleave = Swal.resumeTimer;
-                    toast.addEventListener("click", () => Swal.close());
-                },
-            });
-
-            Toast.fire({
-                icon: "success",
-                title: "Text copied successfully",
-            });
-        }).catch(err => console.error("Copy failed", err));
-    });
-
-    // Initial load: Fetch data and update badge counts
-    getUpdateOrch().done(updateBadgeCounts);
-});
-
-
-</script>
+  $(document).ready(function () {
+      let navAnchor;
+  
+      function getUpdateOrch() {
+          return $.ajax({
+              url: "json/update-orchestra.json",
+              cache: false,
+              dataType: "json",
+          }).fail(function (xhr, status, error) {
+              console.error("Error fetching JSON:", status, error);
+              console.error("Response Text:", xhr.responseText);
+          });
+      }
+  
+      function updateBadgeCounts(updateData) {
+          // $("#orch-sidebar li").each(function () {
+          //     let link = $(this).find("a.nav-link"); // Get the anchor tag
+          //     let key = link.attr("href"); // Get the href value (category key)
+          //     let badge = $(this).find("span.badge");
+  
+          //     if (key && updateData[key]) {
+          //         badge.text(updateData[key].length); // Update badge count
+          //     } else {
+          //         badge.text("0"); // Set to 0 if no data
+          //     }
+          // });
+  
+          // Update total count for "All Areas"
+          let totalCount = Object.values(updateData).reduce((acc, arr) => acc + arr.length, 0);
+          $("#orch-temp-count").text(totalCount);
+      }
+  
+      getUpdateOrch().done(updateBadgeCounts);
+  });
+  
+  
+  </script>
+  
