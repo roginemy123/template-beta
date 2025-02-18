@@ -2,14 +2,17 @@
     "all-areas":[
         "updated color scheme on all areas",
         "updated banner image on all areas",
-        "updated font from  \"Roman\" to \"Eyyy\" on all areas"        
+        "updated font from  \"Roman\" to \"Eyyy\" on all areas",
+        "updated text contents on all areas"
+       
     ],
     "all-pages":[
         "added \"Blog\" drop-down under \"Resources\" tab on main navigation area",
         "updated tabs on main navigation area",
         "updated tabs on main and footer navigation areas",
         "updated company logo on header area",
-        "added company phone number on header area"
+        "added company phone number on header area",
+        "updated layout presentation on header area"
     ],
     "header": [
         "updated company logo on the header area",
