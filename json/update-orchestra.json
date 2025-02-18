@@ -34,5 +34,8 @@
         "updated Twitter social media link on the header area",
         "updated social media icons layout presentation on the header area",
         "added \"Facebook icon\" on header area"
+    ],
+    "meta" : [
+        "updated meta description ang title tag"
     ]
 }
