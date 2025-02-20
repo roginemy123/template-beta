@@ -43,5 +43,8 @@
     ],
     "qa": [
         "fixed layout presentation under \"Welcome To\" section on content area in responsive view"
+    ],
+    "website-files":[
+        "The link below contains all the images on your website:"
     ]
 }
