@@ -56,5 +56,8 @@
         "updated services boxes image on content area",
         "added services boxes on content area",
         "added text contents on content area"
+    ],
+    "tabs":[
+        "removed dropdown under \"Meet The Team\" and \"Request Appointement\" tabs on main navigation area"
     ]
 }
