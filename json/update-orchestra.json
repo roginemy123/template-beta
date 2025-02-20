@@ -58,6 +58,8 @@
         "added text contents on content area"
     ],
     "tabs":[
-        "removed dropdown under \"Meet The Team\" and \"Request Appointement\" tabs on main navigation area"
+        "removed dropdown under \"Meet The Team\" and \"Request Appointement\" tabs on main navigation area",
+        "added \"Patient Forms\" tab on main navigation area",
+        "removed \"Products For Purchase\" tab on main navigation area"
     ]
 }
