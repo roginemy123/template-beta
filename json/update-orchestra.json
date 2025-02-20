@@ -48,5 +48,13 @@
     ],
     "website-files":[
         "The link below contains all the images on your website:"
+    ],
+    "content-area": [
+        "updated text contents on content area",
+        "updated images on content area",
+        "updated services boxes on content area",
+        "updated services boxes image on content area",
+        "added services boxes on content area",
+        "added text contents on content area"
     ]
 }
