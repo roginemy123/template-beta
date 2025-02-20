@@ -39,7 +39,9 @@
         "added \"Facebook icon\" on header area"
     ],
     "meta" : [
-        "updated meta description ang title tag"
+        "updated meta description and title tag",
+        "updated meta description",
+        "updated meta title tag"
     ],
     "qa": [
         "fixed layout presentation under \"Welcome To\" section on content area in responsive view"
