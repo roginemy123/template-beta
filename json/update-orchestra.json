@@ -42,7 +42,8 @@
     "meta" : [
         "updated meta description and title tag",
         "updated meta description",
-        "updated meta title tag"
+        "updated meta title tag",
+        "Unfortunately, displaying the full meta description is beyond our scope, as its visibility is determined by the browser and search engine. In Firefox, the complete meta description may be displayed, including when the tab is hovered over, whereas Google Search may truncate it based on factors such as pixel width and relevance to the search query. Since search engines dynamically generate snippets, there is no way to ensure that the full meta description will always be shown."
     ],
     "qa": [
         "fixed layout presentation under \"Welcome To\" section on content area in responsive view"
